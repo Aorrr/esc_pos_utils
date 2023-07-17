@@ -15,8 +15,10 @@ const cInit = '$esc@'; // Initialize printer
 const cBeep = '${esc}B'; // Beeper [count] [duration]
 
 // Mech. Control
-const cCutFull = '${gs}V0'; // Full cut
-const cCutPart = '${gs}V1'; // Partial cut
+// const cCutFull = '${gs}V0'; // Full cut
+// const cCutPart = '${gs}V1'; // Partial cut
+const cCutFull = '${gs}i'; // Full cut
+const cCutPart = '${gs}i'; // Partial cut
 
 // Character
 const cReverseOn = '${gs}B\x01'; // Turn white/black reverse print mode on
@@ -48,13 +50,11 @@ const cReverseFeedN = '${esc}e'; // Print and reverse feed n lines [N]
 
 // Bit Image
 const cRasterImg = '$gs(L'; // Print image - raster bit format (graphics)
-const cRasterImg2 =
-    '${gs}v0'; // Print image - raster bit format (bitImageRaster) [obsolete]
+const cRasterImg2 = '${gs}v0'; // Print image - raster bit format (bitImageRaster) [obsolete]
 const cBitImg = '$esc*'; // Print image - column format
 
 // Barcode
-const cBarcodeSelectPos =
-    '${gs}H'; // Select print position of HRI characters [N]
+const cBarcodeSelectPos = '${gs}H'; // Select print position of HRI characters [N]
 const cBarcodeSelectFont = '${gs}f'; // Select font for HRI characters [N]
 const cBarcodeSetH = '${gs}h'; // Set barcode height [N]
 const cBarcodeSetW = '${gs}w'; // Set barcode width [N]
